@@ -1,0 +1,34 @@
+<!-- header-bot -->
+<div class="header-bot">
+    <div class="container">
+        <div class="col-md-3 header-left">
+            <h1><a href="index.html"><img src="images/logo3.jpg"></a></h1>
+        </div>
+        <div class="col-md-5 header-middle">
+            <form>
+                <div class="search">
+                    <input type="search" value="Search" required="">
+                </div>
+                <div class="sear-sub">
+                    <input type="submit" value=" ">
+                </div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <div class="col-md-4 footer-bottom">
+            <div class="pull-right" ng-show="!isAuthenticated">
+                <a ui-sref="home.login" class="">{{ 'AUTH.BTN_LOGIN' | translate }}</a>
+            </div>
+            <div class="dropdown pull-right" ng-show="isAuthenticated">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    {{ username }} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="">{{ 'AUTH.PROFILE' | translate }}</a></li>
+                    <li><a ui-sref="logout" class="">{{ 'AUTH.BTN_LOGOUT' | translate }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
